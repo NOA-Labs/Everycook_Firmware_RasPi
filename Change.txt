@@ -1,0 +1,19 @@
+1./everycook/Makefile 
+LIBS	= -lwiringPi   [[[Change to]]] 
+
+LIBS	= -lwiringPi -lpthread   [[[for the compile error]]]
+
+2.add more file "config.txt" under the /everycook/ for configuration the IN-AMP for
+  the AD7794 for every channel of the adc
+
+  add more function 
+	void ReadConfigurationFile(void);
+  For read the configuration from the file "config.txt" and change the date which 
+  will be written into the configurtion register of the AD7794.
+
+  add more function
+	int PWONTimes(uint32_t num, uint8_t n);
+  For convert the num IN-AMP Times to the configuartion number.
+
+3.Add more text for explain the Name in the website.
+  Configurate the prescale register in the PCA9685 to make the 50HZ frequency PWM for drive the Servo.
