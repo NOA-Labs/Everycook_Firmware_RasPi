@@ -29,7 +29,7 @@ function getfile() {
 		}
 		}
 	}
-	xmlhttp.open("GET", "readfile.txt", true);
+	xmlhttp.open("POST", "readfile.txt", true);
 	xmlhttp.send();
 }
 

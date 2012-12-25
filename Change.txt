@@ -17,3 +17,11 @@ LIBS	= -lwiringPi -lpthread   [[[for the compile error]]]
 
 3.Add more text for explain the Name in the website.
   Configurate the prescale register in the PCA9685 to make the 50HZ frequency PWM for drive the Servo.
+
+4.Change
+  /www/ajax.js   32 line 	
+  xmlhttp.open("GET", "readfile.txt", true);
+  To
+  xmlhttp.open("POST", "readfile.txt", true);
+
+	Then fix the auto-refresh problem: ohter browser can auto-refresh the data from server.
